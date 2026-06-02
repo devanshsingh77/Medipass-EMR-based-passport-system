@@ -85,3 +85,19 @@ We are actively building toward the following Web3 and AI integrations:
 - **Frontend:** React (Vite), Tailwind CSS, Framer Motion, Lucide Icons, QR-Code generation.
 - **Backend:** Node.js, Express, MongoDB (Mongoose), JWT, UUID tokenization.
 - **Design System:** Epic Systems / Apple Health inspired deep dark mode (`#0D1117`), backdrop-blur glass surfaces, and `Plus Jakarta Sans` typography.
+
+
+## Functionalities & Benefits
+
+**Medipass EMR** empowers both patients and healthcare providers with a suite of powerful, privacy‑focused features:
+
+- **Smart Consent QR Tokens** – Patients generate cryptographically signed QR tokens that grant selective access to specific health records, ensuring they share only what they choose.
+- **Selective Data Sharing** – Users can pick individual records (e.g., allergies, prescriptions, lab results) to include in a token, keeping all other data private.
+- **Real‑time Access Notifications** – Patients receive instant alerts whenever a doctor scans their token, with details of who accessed which records.
+- **One‑click Revoke** – A panic‑button instantly invalidates all active tokens, giving patients immediate control to stop any further access.
+- **Patient Dashboard** – A sleek dark‑mode interface shows a comprehensive view of medical history, with visual cues (color‑coded cards, pulse alerts for severe allergies) and easy record selection.
+- **Doctor Dashboard** – Secure login for providers to scan tokens and view only the consented data, reducing liability and simplifying onboarding.
+- **Audit Trail** – Every access event is logged on the backend and displayed to the patient, ensuring full transparency.
+- **Privacy‑First Design** – No static PDFs are stored; all data is structured JSON in a MongoDB database, adhering to modern FHIR‑inspired standards.
+- **Future‑Ready Architecture** – The system is built to integrate upcoming technologies like AI‑driven record summarization, zero‑knowledge proofs, and NFC emergency access.
+

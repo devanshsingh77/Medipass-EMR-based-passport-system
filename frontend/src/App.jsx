@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import PatientDashboard from './pages/PatientDashboard';
 import DoctorDashboard from './pages/DoctorDashboard';
-
+import InfoButton from "./components/InfoButton";
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +13,7 @@ function App() {
           <Route path="/patient" element={<PatientDashboard />} />
           <Route path="/doctor" element={<DoctorDashboard />} />
         </Routes>
+          <InfoButton />
       </div>
     </BrowserRouter>
   );
