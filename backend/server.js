@@ -1,5 +1,6 @@
 import express from "express";
-import mongoose from "mongoose";
+import path from "path";
+import { fileURLToPath } from "url";
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -13,7 +14,14 @@ dotenv.config();
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// Serve static frontend files
+app.use(express.static(path.join(__dirname, '..', 'frontend', 'dist')));
+// Fallback to index.html for SPA routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'frontend', 'dist', 'index.html'));
+});
 
 mongoose.connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/health_passport")
   .then(() => console.log("DB Connected"))

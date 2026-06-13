@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: health-passport-emr
+    env: node
+    buildCommand: npm install && cd frontend && npm install && npm run build && cd ../backend && npm install
+    startCommand: cd backend && npm start
